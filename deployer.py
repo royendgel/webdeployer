@@ -13,6 +13,7 @@ class Deployer(object):
     """
     Setup create the necesary directories to deploy
     """
+    pass
 
   def generate_configs(self):
     pass

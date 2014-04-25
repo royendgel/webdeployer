@@ -5,7 +5,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 readme = open('README.md').read()
 setup(
-    name = "deployer",
+    name = "webdeployer",
     version = "0.0.1",
     author = "Royendgel Silberie",
     author_email = "royendgel@techprocur.com",
@@ -21,4 +21,8 @@ setup(
       'Topic :: Utilities',
       'Programming Language :: Python :: 2.7',
     ],
+    requires=[
+      'fabric',
+      'jinja',
+    ]
 )

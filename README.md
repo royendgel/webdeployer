@@ -14,3 +14,15 @@ requirements :
 
 
 This is module is being set free from Private so it may take time to free out all the mess from my private repo
+
+
+TO INSTALL
+==========
+
+```
+pip install webdeployment
+```
+
+MILESTONE/ROADMAP
+
+- I want to make it more customizable
