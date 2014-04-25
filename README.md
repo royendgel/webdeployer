@@ -1,14 +1,17 @@
 DEPLOYER
 ========
 
-### This deployer allows you to deploy fast and easy to your webserver.
+### This webdeployer allows you to deploy fast and easy to your webserver.
+Automate deployments of your webapps using :
 
-Very cool if you are using : NGINX & GUNICORN
+-   GUNICORN
+-   NGINX
+-   SUPERVISORD
 
 You need to use a directory format like : ```/projects/client/client_name/project/source```
 
 requirements :
-- Python 2.7 
+- Python 2.7
 - Fabric
 - Jinja
 
