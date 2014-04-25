@@ -16,6 +16,12 @@ requirements :
 - Jinja
 
 
+On your server you need to have already installed and running:
+-   nginx
+-   gunicorn(not realy only you need to have the package installed)
+-   supervisord
+
+
 This is being set free from Private so it may take time to free out all the mess from my private repo
 
 
@@ -25,6 +31,14 @@ TO INSTALL
 ```
 pip install webdeployer
 ```
+
+
+If you are deploying for the first time :
+go in your project directory and type : webdeployer init
+
+edit the webdeployer-config.py
+
+then type webdeployer deploy
 
 MILESTONE/ROADMAP
 
