@@ -13,7 +13,7 @@ You need to use a directory format like : ```/projects/client/client_name/projec
 requirements :
 - Python 2.7
 - Fabric
-- Jinja
+- Jinja2
 
 
 On your server you need to have already installed and running:

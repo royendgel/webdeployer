@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name {%  for server in servers %} {{server}} {{server}};
+    server_name {%  for server in servers %} {{server}} {%  endfor %};
 
     root /path/to/hello;
 
