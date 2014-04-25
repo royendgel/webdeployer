@@ -1,1 +1,1 @@
-include generators/* deployer/*
+include generators/* deployer/* *
