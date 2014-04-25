@@ -8,7 +8,7 @@ Very cool if you are using : NGINX & GUNICORN
 You need to use a directory format like : ```/projects/client/client_name/project/source```
 
 requirements :
-
+- Python 2.7 
 - Fabric
 - Jinja
 
@@ -20,7 +20,7 @@ TO INSTALL
 ==========
 
 ```
-pip install webdeployment
+pip install webdeployer
 ```
 
 MILESTONE/ROADMAP
