@@ -1,0 +1,4 @@
+from os import curdir
+import os
+from webdeployer.generator import Generator
+print Generator().generate_nginx()
