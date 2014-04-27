@@ -41,11 +41,24 @@ edit the file project-config inside that dir
 example :
 ```
 [Settings]
-client_name = "Techpro And Services N.V."
-project_name = "blog app"
-app_name = "blog app"
-directory = ""
+# for now only python
+project_language = "python"
+# for now only django or flask
+project_framework = "flask"
+client_name = "Royendgel Silberie"
+project_name = "Website"
+app_name = "Website"
+"""
+ The directory_server var is for setting the
+ if you leave directory empty it will be something like /projects/client_name/app_name/source/
+"""
+directory_server = ""
+
 servers = ["sweet.techprocur.com"]
+server_uses_password = False
+server_password ""
+# change this to the correct user if you don't know usualy you are using root as login change it
+server_user_name = "website"
 ```
 
 
@@ -61,4 +74,5 @@ MILESTONE/ROADMAP
 
 - I want to make it more customizable
 - make use of chef-solo to deploy to all os with dependecies
-- want to make it usable for : rails, php , wordpress, unicorn , apache
+- want to make it usable for : rails, php , wordpress, unicorn , apache, passanger, uswsgi etc
+- make an option that users can store settings global
