@@ -1,6 +1,49 @@
 from os import curdir
 import os
 from webdeployer.generator import Generator
-print Generator().generate_nginx()
-print Generator().generate_gunicorn()
-print Generator().generate_supervisord()
+import argparse
+import ConfigParser
+settings = {}
+txt = """ __      __      ___.        .___            .__
+/  \    /  \ ____\_ |__    __| _/____ ______ |  |   ____ ___.__. ___________
+\   \/\/   // __ \| __ \  / __ |/ __ \\____ \|  |  /  _ <   |  |/ __ \_  __ \
+ \        /\  ___/| \_\ \/ /_/ \  ___/|  |_> >  |_(  <_> )___  \  ___/|  | \/
+  \__/\  /  \___  >___  /\____ |\___  >   __/|____/\____// ____|\___  >__|
+       \/       \/    \/      \/    \/|__|               \/         \/
+"""
+parser = argparse.ArgumentParser(description=txt)
+
+parser.add_argument('-i', '--init', default='init', action='store_true',
+                   help='to initialize the directory, this will add a config file')
+
+parser.add_argument('-d', '--deploy', default='deploy', action='store_true',
+                   help='This will deploy to your Server(s)')
+
+parser.add_argument('-t', '--test', default='test', action='store_true',
+                   help='This is for testing some sandbox code')
+
+args = parser.parse_args()
+gen = Generator()
+if args.init == True:
+  gen.generate_config()
+
+
+if args.deploy == True:
+  # will generate the config files
+  gen.generate_supervisord()
+  gen.generate_gunicorn()
+  gen.generate_nginx()
+
+  # connect to the server
+if args.test == True:
+  config = ConfigParser.RawConfigParser()
+  file_path = os.path.join(os.curdir, 'webdeployer-config', 'project-config.conf')
+  config.read(file_path)
+
+  par = dict(config.items("Settings"))
+  for p in par:
+    par[p] = par[p].split("#", 1)[0].strip()
+    # settings[p] = par[p].split("#", 1)[0].strip()
+    settings.update({p : par[p].split("#", 1)[0].strip()})
+
+print settings

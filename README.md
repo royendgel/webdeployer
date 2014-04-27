@@ -32,6 +32,23 @@ TO INSTALL
 pip install webdeployer
 ```
 
+to initialize your project :
+go into your project dir and type the following command : `webdeployer init`
+
+a folder named "webdeployer-config" will be created in your project dir
+edit the file project-config inside that dir
+
+example :
+```
+[Settings]
+client_name = "Techpro And Services N.V."
+project_name = "blog app"
+app_name = "blog app"
+directory = ""
+servers = ["sweet.techprocur.com"]
+```
+
+
 
 If you are deploying for the first time :
 go in your project directory and type : webdeployer init
@@ -43,3 +60,5 @@ then type webdeployer deploy
 MILESTONE/ROADMAP
 
 - I want to make it more customizable
+- make use of chef-solo to deploy to all os with dependecies
+- want to make it usable for : rails, php , wordpress, unicorn , apache

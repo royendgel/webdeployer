@@ -6,7 +6,7 @@ def read(fname):
 readme = open('README.md').read()
 setup(
     name = "webdeployer",
-    version = "0.0.3",
+    version = "0.0.4",
     author = "Royendgel Silberie",
     author_email = "royendgel@techprocur.com",
     description = ("Personal Deployer for site created with Flask and Django"),
